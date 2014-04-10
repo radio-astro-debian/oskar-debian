@@ -1,0 +1,5 @@
+oskar (2.4.0-1trusty) trusty; urgency=low
+
+  * Initial release
+
+ -- Gijs Molenaar <gijs@pythonic.nl>  Thu, 10 Apr 2014 12:17:39 +0200

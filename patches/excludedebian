@@ -1,0 +1,16 @@
+Description: exclude the debian build files also
+
+--- oskar-2.4.0.orig/CMakeLists.txt
++++ oskar-2.4.0/CMakeLists.txt
+@@ -168,7 +168,10 @@ install(DIRECTORY "${OSKAR_SOURCE_DIR}/.
+     PATTERN src  EXCLUDE
+     PATTERN test EXCLUDE
+     PATTERN extern EXCLUDE
+-    PATTERN .svn EXCLUDE)
++    PATTERN .svn EXCLUDE
++    PATTERN debian EXCLUDE
++    PATTERN "obj-*" EXCLUDE
++)
+ 
+ # === Include packaging script.
+ include(cmake/oskar_packaging.cmake)

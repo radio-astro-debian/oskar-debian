@@ -1,8 +1,8 @@
-Description: don't install debian and build files
+Description: don't install debian temp files
 
---- oskar-2.5.1.orig/CMakeLists.txt
-+++ oskar-2.5.1/CMakeLists.txt
-@@ -175,7 +175,10 @@ install(DIRECTORY "${OSKAR_SOURCE_DIR}/.
+--- oskar-2.6.1.orig/CMakeLists.txt
++++ oskar-2.6.1/CMakeLists.txt
+@@ -152,7 +152,11 @@ install(DIRECTORY "${PROJECT_SOURCE_DIR}
      PATTERN src  EXCLUDE
      PATTERN test EXCLUDE
      PATTERN extern EXCLUDE
@@ -11,6 +11,6 @@ Description: don't install debian and build files
 +    PATTERN debian EXCLUDE
 +    PATTERN "obj-*" EXCLUDE
 +)
- 
- # === Copy cleanup bash script into the build directory
- configure_file(${PROJECT_SOURCE_DIR}/cmake/oskar_cleanup.sh 
++
+ install(FILES ${PROJECT_BINARY_DIR}/oskar_version.h
+     DESTINATION ${OSKAR_INCLUDE_INSTALL_DIR})

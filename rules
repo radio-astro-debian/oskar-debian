@@ -3,7 +3,7 @@
 #
 #export DH_VERBOSE=1
 
-CMAKE_FLAGS = -DCUDA_ARCH=3.5
+CMAKE_FLAGS = -DCUDA_ARCH=3.5 -DCMAKE_BUILD_TYPE=Release
 
 %:
 	dh $@ --parallel
